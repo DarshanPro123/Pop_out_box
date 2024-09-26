@@ -6,6 +6,7 @@ const QuestionBox = (props) => {
     <div key={keys} className="list">
       <div className="list-title" onClick={() => handleChange(keys)}>
         <span>{keys < 9 ? `0${keys + 1}` : keys + 1}.</span>
+        {/* <h2></h2> */}
         <h2>{qus.question}</h2>
         <span> {openStates[keys] ? "-" : "+"}</span>
       </div>
