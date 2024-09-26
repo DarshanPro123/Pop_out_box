@@ -1,11 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* App.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 
 body {
-  background-color: black;
-  color: whitesmoke;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  color: #fff;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  justify-content: center;
+  /* border: 1px solid black; */
+  /* text-align: center; */
+}
+
+.list {
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 6px 8px 30px black;
+}
+
+.list p {
+  padding: 8px;
+  color: #383939;
+  font-family: "Bodoni Moda", serif;
+  font-size: 1.3rem;
+  line-height: 30px;
+}
+.list-title {
+  display: flex;
+  padding: 10px;
+  background-color: #383939;
+  color: whitesmoke;
+  align-items: center;
+  text-align: left;
+  gap: 40px;
+  font-size: 1.2rem;
+}
+
+.list-title span {
+  font-size: 2rem;
 }
