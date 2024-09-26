@@ -22,19 +22,25 @@ h1 {
   flex-direction: column;
   width: 90%;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   border: none;
   border-radius: 8px;
   margin: 0 auto;
   justify-content: center;
   /* border: 1px solid black; */
   /* text-align: center; */
+  margin-top: 40px;
+}
+
+.list:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 
 .list {
-  border: 1px solid black;
+  border-top: 4px solid rgb(126, 159, 248);
   border-radius: 8px;
-  box-shadow: 6px 8px 30px black;
+  box-shadow: 0px 5px 30px black;
 }
 
 .list p {
@@ -47,7 +53,7 @@ h1 {
 .list-title {
   display: flex;
   padding: 10px;
-  background-color: #383939;
+  background-color: #6ab8fd;
   color: whitesmoke;
   align-items: center;
   text-align: left;
@@ -56,5 +62,5 @@ h1 {
 }
 
 .list-title span {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }

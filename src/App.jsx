@@ -10,16 +10,13 @@ function App() {
         <div className="lists">
           {data.map((qus, i) => {
             return (
-              <>
-                {" "}
-                <div key={i} className="list">
-                  <div className="list-title">
-                    <span>{i + 1}.</span>
-                    <h2>{qus.title}</h2>
-                  </div>
-                  <p>{qus.text}</p>
+              <div key={qus.title} className="list">
+                <div className="list-title">
+                  <span>0{i + 1}.</span>
+                  <h2>{qus.title}</h2>
                 </div>
-              </>
+                <p>{qus.text}</p>
+              </div>
             );
           })}
         </div>
