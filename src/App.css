@@ -53,12 +53,23 @@ h1 {
 .list-title {
   display: flex;
   padding: 10px;
+  justify-content: space-between;
   background-color: #6ab8fd;
   color: whitesmoke;
   align-items: center;
   text-align: left;
   gap: 40px;
   font-size: 1.2rem;
+}
+
+.list-title:hover {
+  transform: scale(1.01);
+}
+
+.list-title h2 {
+  text-align: left;
+  align-items: start;
+  width: 100%;
 }
 
 .list-title span {
