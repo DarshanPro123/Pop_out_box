@@ -1,22 +1,29 @@
 import PropTypes from "prop-types";
 
 const QuestionBox = (props) => {
-  const { openStates, qus, keys, handleChange } = props;
+  // eslint-disable-next-line react/prop-types
+  const { qus, keys, currentOpen, onOpen } = props;
+
+  const openStates = currentOpen === keys;
+
+  const handleChange = () => {
+    onOpen(openStates ? null : keys);
+  };
+
   return (
     <div key={keys} className="list">
       <div className="list-title" onClick={() => handleChange(keys)}>
         <span>{keys < 9 ? `0${keys + 1}` : keys + 1}.</span>
-        {/* <h2></h2> */}
         <h2>{qus.question}</h2>
-        <span> {openStates[keys] ? "-" : "+"}</span>
+        <span> {openStates ? "-" : "+"}</span>
       </div>
-      {openStates[keys] ? <p>{qus.answer}</p> : ""}
+      {openStates ? <p>{qus.answer}</p> : ""}
     </div>
   );
 };
 
 QuestionBox.propTypes = {
-  openStates: PropTypes.arrayOf(PropTypes.bool).isRequired, // Assuming openStates is an array of booleans
+  openStates: PropTypes.arrayOf(PropTypes.bool), // Assuming openStates is an array of booleans
   qus: PropTypes.shape({
     question: PropTypes.string.isRequired,
     answer: PropTypes.string.isRequired,

@@ -5,13 +5,10 @@ import QuestionBank from "./Components/QuestionBox.jsx";
 
 function App() {
   // Initialize an array of booleans for each question's open state
-  const [openStates, setOpenStates] = useState(Array(data.length).fill(false));
+  const [currentOpen, setCurentOpn] = useState(null);
 
-  const handleChange = (index) => {
-    // Update the specific index in the openStates array
-    setOpenStates((prevStates) =>
-      prevStates.map((state, i) => (i === index ? !state : state))
-    );
+  const handleCurrentOpen = (keys) => {
+    setCurentOpn(keys);
   };
 
   return (
@@ -23,10 +20,10 @@ function App() {
             return (
               <>
                 <QuestionBank
-                  openStates={openStates}
                   qus={qus}
+                  currentOpen={currentOpen}
+                  onOpen={handleCurrentOpen}
                   keys={i}
-                  handleChange={handleChange}
                 />
               </>
             );
