@@ -18,14 +18,14 @@ function App() {
         <div className="lists">
           {data.map((qus, i) => {
             return (
-              <>
+              <div key={i}>
                 <QuestionBank
                   qus={qus}
                   currentOpen={currentOpen}
                   onOpen={handleCurrentOpen}
                   keys={i}
                 />
-              </>
+              </div>
             );
           })}
         </div>

@@ -29,7 +29,7 @@ QuestionBox.propTypes = {
     answer: PropTypes.string.isRequired,
   }).isRequired,
   keys: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func,
 };
 
 export default QuestionBox;
